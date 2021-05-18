@@ -3,6 +3,8 @@ let attempts = 0;
 let maxAttempts = 25;
 let attemptsEl = document.getElementById('attempts');
 let product = [];
+let productsNamesArray = []
+let div = document.getElementById('div');
 function Busmall(productName) {
     //'cruisin-goat.jpg'.split('.') >>['cruisin-goat','jpg']
     this.productName = productName.split('.')[0];
@@ -89,32 +91,70 @@ function handelClicks(event) {
         product[middleImgIndex].clicks++;}
         renderImg();
     } else {
-        let ulEl = document.getElementById('results');
-        let liEl;
-        for (let i = 0; i < product.length; i++) {
-            liEl = document.createElement('li');
-            ulEl.appendChild(liEl);
-            liEl.textContent = `${product[i].productName} has ${product[i].views} views and has ${product[i].clicks} clicks.`
+    //     let ulEl = document.getElementById('results');
+    //     let liEl;
+    //     for (let i = 0; i < product.length; i++) {
+    //         liEl = document.createElement('li');
+    //         ulEl.appendChild(liEl);
+            // liEl.textContent = `${product[i].productName} has ${product[i].views} views and has ${product[i].clicks} clicks.`
         
-    }
         lImgEl.removeEventListener('click', handelClicks);
         rImgEl.removeEventListener('click', handelClicks);
         mImgEl.removeEventListener('click', handelClicks);
+        let button1 = document.createElement('button');
+
+        div.appendChild(button1);
+        button1.textContent = 'viewResults'
+        button1.addEventListener('click', BUTTONFUNCTION);
 
     }
 
 }
-let button1 = getElementById('CLICKBUTTON');
-button1.addEventListener('click', BUTTONFUNCTION);
 
 function BUTTONFUNCTION (){
     let ulEl = document.getElementById('results');
+    div.appendChild(ulEl);
     let liEl;
     for (let i = 0; i < product.length; i++) {
         liEl = document.createElement('li');
         ulEl.appendChild(liEl);
         liEl.textContent = `${product[i].productName} has ${product[i].views} views and has ${product[i].clicks} clicks.`
     } 
-    button1.removeEventListener('click', BUTTONFUNCTION);
+    // button1.removeEventListener('click', BUTTONFUNCTION);
 
 }
+// let ctx = document.getElementById('myChart').getContext('2d');
+// let myChart = new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [12, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             y: {
+//                 beginAtZero: true
+//             }
+//         }
+//     }
+// });
