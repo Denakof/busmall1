@@ -1,20 +1,24 @@
 * {
     box-sizing: border-box;
+    background-color: rgb(250, 240, 200);
   }
   h1 {
     text-align: center;
-    color: rgb(4, 4, 34);
-    font-weight: 400;
+    color: rgb(201, 68, 15);
+    font-weight: 400px;
+    font-size: larger;
+    font-weight: bolder;
   }
   img {
     display: block;
     width: 150px;
     float: left;
+    box-shadow: cadetblue;
     height: 150px;
-    border: 2px solid lightblue;
+    border: 1px solid rgb(35, 98, 119);
   }
   #image-container {
-    padding-left: 100px;
+    padding-left: 150px;
     border: 2px solid rgb(21, 117, 109);
     width: 750px;
     margin: 0 auto;
@@ -36,4 +40,20 @@
     margin-left: 20px;
     font-size: 30px;
   }
-
+#par1{
+  font-size: larger;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+}
+#span1{
+  font-size: larger;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+}
+button{
+  font-size: larger;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-rendering: geometricPrecision;
+}
